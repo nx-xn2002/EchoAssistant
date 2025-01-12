@@ -4,6 +4,7 @@ import com.bupt.echoassistantbackend.annotation.AuthCheck;
 import com.bupt.echoassistantbackend.common.ErrorCode;
 import com.bupt.echoassistantbackend.content.UserContent;
 import com.bupt.echoassistantbackend.exception.BusinessException;
+import com.bupt.echoassistantbackend.model.domain.User;
 import com.bupt.echoassistantbackend.service.UserService;
 import jakarta.annotation.Resource;
 import jakarta.servlet.http.HttpServletRequest;
@@ -48,7 +49,7 @@ public class AuthInterceptor {
             return joinPoint.proceed();
         }
         // 必须有该权限才通过
-        String userRole = UserContent.getRoleStrByValue(loginUser.getUserRole());
+        String userRole = UserContent.getRoleStrByValue(loginUser.getRole());
         if (userRole == null) {
             throw new BusinessException(ErrorCode.NO_AUTH);
         }

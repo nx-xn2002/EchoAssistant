@@ -31,15 +31,14 @@ public class CheckUtils {
     /**
      * 校验用户名
      * <p>
-     * 1. 长度大于等于 4 且小于等于 10
+     * 1. 长度大于等于 4 且小于等于 20
      * 2. 只允许包含数字、字母、下划线
      *
      * @param username username
      * @return boolean
-     * @author Ni Xiang
      */
     public static boolean checkUsername(String username) {
-        if (username == null || username.length() < 4 || username.length() > 10) {
+        if (username == null || username.length() < 4 || username.length() > 20) {
             return false;
         }
         for (int i = 0; i < username.length(); i++) {
