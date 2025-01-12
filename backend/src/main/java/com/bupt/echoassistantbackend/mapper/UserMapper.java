@@ -1,7 +1,7 @@
 package com.bupt.echoassistantbackend.mapper;
 
-import com.bupt.echoassistantbackend.model.domain.User;
 import com.baomidou.mybatisplus.core.mapper.BaseMapper;
+import com.bupt.echoassistantbackend.model.domain.User;
 
 /**
 * @author 18702

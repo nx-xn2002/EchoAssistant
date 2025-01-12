@@ -12,7 +12,6 @@ import com.bupt.echoassistantbackend.model.request.UserLoginRequest;
 import com.bupt.echoassistantbackend.model.request.UserRegisterRequest;
 import com.bupt.echoassistantbackend.service.UserService;
 import com.google.code.kaptcha.Constants;
-import jakarta.annotation.Resource;
 import jakarta.servlet.http.HttpServletRequest;
 import lombok.extern.slf4j.Slf4j;
 import org.apache.commons.lang3.StringUtils;
@@ -29,9 +28,6 @@ import static com.bupt.echoassistantbackend.content.UserContent.*;
 @Slf4j
 public class UserServiceImpl extends ServiceImpl<UserMapper, User>
         implements UserService {
-    @Resource
-    private UserMapper userMapper;
-
     @Override
     public Long userRegister(UserRegisterRequest registerRequest, HttpServletRequest request) {
         String username = registerRequest.getUsername();

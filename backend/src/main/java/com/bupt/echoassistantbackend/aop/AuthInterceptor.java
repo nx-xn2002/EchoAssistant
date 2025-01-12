@@ -4,7 +4,6 @@ import com.bupt.echoassistantbackend.annotation.AuthCheck;
 import com.bupt.echoassistantbackend.common.ErrorCode;
 import com.bupt.echoassistantbackend.content.UserContent;
 import com.bupt.echoassistantbackend.exception.BusinessException;
-import com.bupt.echoassistantbackend.model.domain.User;
 import com.bupt.echoassistantbackend.service.UserService;
 import jakarta.annotation.Resource;
 import jakarta.servlet.http.HttpServletRequest;
